@@ -488,6 +488,12 @@
 .bold {
   font-weight: 900; }
 
+.light {
+  font-weight: 200; }
+
+.opacity-50 {
+  opacity: .5; }
+
 .uppercase {
   text-transform: uppercase; }
 
@@ -500,14 +506,36 @@
 .title-icon {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -.2em;
   z-index: -1;
   -webkit-transform: translateX(50%);
           transform: translateX(50%); }
 
+.extras-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem; }
+  @media screen and (max-width: 576px) {
+    .extras-grid {
+      -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 1rem; } }
+
+.footer {
+  background-color: var(--yellow);
+  height: 20vh; }
+  .footer div:first-child {
+    height: 100%; }
+
 .header {
   position: relative;
   height: 80vh; }
+  @media screen and (max-width: 576px) {
+    .header {
+      height: 100vh; } }
 
 .navbar {
   position: absolute;
@@ -550,6 +578,19 @@
   position: absolute;
   top: 2rem;
   right: 0; }
+
+.timeline-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+  grid-template-columns: 1fr 4fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem; }
+  @media screen and (max-width: 576px) {
+    .timeline-grid {
+      -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 1rem; } }
 
 .skills-grid {
   display: -ms-grid;
@@ -5062,16 +5103,18 @@ body {
   background-color: var(--dark);
   color: var(--white);
   font-size: var(--font-size);
-  font-family: var(--secondary-font);
-  padding-left: 20%;
-  padding-right: 20%; }
-  @media screen and (max-width: 576px) {
-    body {
-      padding-left: 20px;
-      padding-right: 20px; } }
+  font-family: var(--secondary-font); }
 
 body i {
   font-family: "FontAwesome" !important; }
+
+.main {
+  padding-left: 20%;
+  padding-right: 20%; }
+  @media screen and (max-width: 576px) {
+    .main {
+      padding-left: 20px;
+      padding-right: 20px; } }
 
 p {
   line-height: 1.8; }
