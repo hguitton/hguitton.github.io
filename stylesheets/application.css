@@ -508,8 +508,8 @@
   top: 0;
   right: -.2em;
   z-index: -1;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%); }
+  -webkit-transform: translateX(50%) !important;
+          transform: translateX(50%) !important; }
 
 .extras-grid {
   display: -ms-grid;
