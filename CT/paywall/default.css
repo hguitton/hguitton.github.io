@@ -1,0 +1,246 @@
+@font-face {
+  font-family: "Proxima-Nova-Extrabold";
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/6180fb511029bf0aefb2ae97/fonts/proxima-nova-extrabold.otf') format("opentype");
+}
+@font-face {
+  font-family: "Proxima-Nova-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/60bdaccb1fa40b327a333e32/fonts/mark-simonson-proxima-nova-a.otf') format("opentype");
+}
+@font-face {
+  font-family: "Proxima-Nova-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/623ec822ecf12f908cda1529/fonts/mark-simonson-proxima-nova-bold.otf') format("opentype");
+}
+@font-face {
+  font-family: "Proxima-Nova-BoldItalic";
+  font-style: italic;
+  font-weight: 700;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/60e6a1457f75761b3e1de597/fonts/proximanova-boldit.otf') format("opentype");
+}
+@font-face {
+  font-family: "Proxima-Nova-RegularItalic";
+  font-style: italic;
+  font-weight: 400;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/5f5290d4f987d852ef5a8e2b/fonts/proximanova-regularitalic.otf') format("opentype");
+}
+
+*{ box-sizing: border-box }
+/* Tailwind default style for inputs */
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+.inapp [type='text'],textarea,select {
+  -webkit-appearance: none;
+    -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  border-color: #6b7280;
+  border-width: 1px;
+  border-radius: 0px;
+  padding-top: 0.5rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.wrapper {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 40%);
+  --yellow: #fcc013;
+  --gray-light: #f0f0f0;
+  --black: #202020;
+  --gray: #595a5a;
+  --font-app-title: "Proxima-Nova-Extrabold", sans-serif;
+  --font-content: "Proxima-Nova-Regular", sans-serif;
+  --font-title: "Proxima-Nova-Bold", sans-serif;
+}
+
+.close-button {
+  display: flex;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 49;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 100%;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.inapp {
+  overflow: auto;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  margin: 0px 0;
+  background: var(--gray-light);
+  font-family: var(--font-content);
+}
+
+.hidden {
+  display: none;
+}
+
+.header  {
+  position: absolute;
+  top: 0;
+  height: 40%;
+  width: 100%;
+  background-image: url('./header.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.main-container__top {
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__subtitle {
+  margin-top: 17%;
+  color: var(--yellow);
+  font-size: 18px;
+  font-family: var(--font-app-title);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.header__title {
+  color: var(--gray-light);
+  font-family: var(--font-app-title);
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.main-box {
+  z-index: 10;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: 7px solid var(--yellow);
+  background: var(--gray-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.main-box__title {
+  padding-top: 10px;
+  font-size: 32px;
+  color: var(--black);
+  font-family: var(--font-app-title);
+  font-weight: 900;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.main-box__subtitle {
+  font-size: 14px;
+  color: var(--gray);
+  text-align: center;
+}
+
+.main-box__features {
+  color: var(--black);
+  font-family: var(--font-content);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: -35px;
+}
+
+.main-box__feature {
+  margin: 5px 0;
+  font-size: 14px;
+  font-family: var(--font-app-title);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-box__feature__icon {
+ height: 28px;
+ width: 28px;
+ margin-right: 15px;
+}
+
+.price-text {
+  margin: 10px 0;
+}
+
+.button {
+  background: var(--yellow);
+  color: var(--black);
+  text-transform: uppercase;
+  font-family: var(--font-app-title);
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+}
+
+@media (max-height: 750px) {
+  .main-container {
+    padding: 25px;
+  }
+
+  .header__subtitle {
+    margin-top: 5%;
+  }
+
+  .main-box {
+    padding: 15px;
+  }
+
+  .main-box__title {
+    font-size: 28px;
+    padding: 0;
+  }
+  .main-box__feature{
+    margin: 2px;
+  }
+}
